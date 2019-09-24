@@ -1,0 +1,35 @@
+C:\Users\User\source\repos\Chat\Models\bin\Debug\netcoreapp2.1\Chat.Models.deps.json
+C:\Users\User\source\repos\Chat\Models\bin\Debug\netcoreapp2.1\Chat.Models.dll
+C:\Users\User\source\repos\Chat\Models\obj\Debug\netcoreapp2.1\Chat.Models.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Chat\Models\obj\Debug\netcoreapp2.1\Chat.Models.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Chat\Models\obj\Debug\netcoreapp2.1\Chat.Models.AssemblyInfo.cs
+C:\Users\User\source\repos\Chat\Models\bin\Debug\netcoreapp2.1\Chat.Models.pdb
+C:\Users\User\source\repos\Chat\Models\obj\Debug\netcoreapp2.1\Chat.Models.dll
+C:\Users\User\source\repos\Chat\Models\obj\Debug\netcoreapp2.1\Chat.Models.pdb
+C:\Users\User\source\repos\Chat\Models\obj\Debug\netcoreapp2.1\Chat.Models.csprojAssemblyReference.cache
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Models\bin\Debug\netcoreapp2.1\Chat.Models.deps.json
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Models\bin\Debug\netcoreapp2.1\Chat.Models.dll
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Models\bin\Debug\netcoreapp2.1\Chat.Models.pdb
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Models\obj\Debug\netcoreapp2.1\Chat.Models.csprojAssemblyReference.cache
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Models\obj\Debug\netcoreapp2.1\Chat.Models.csproj.CoreCompileInputs.cache
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Models\obj\Debug\netcoreapp2.1\Chat.Models.AssemblyInfoInputs.cache
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Models\obj\Debug\netcoreapp2.1\Chat.Models.AssemblyInfo.cs
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Models\obj\Debug\netcoreapp2.1\Chat.Models.dll
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Models\obj\Debug\netcoreapp2.1\Chat.Models.pdb
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Models\bin\Debug\netcoreapp2.1\Chat.Models.deps.json
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Models\bin\Debug\netcoreapp2.1\Chat.Models.dll
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Models\bin\Debug\netcoreapp2.1\Chat.Models.pdb
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Models\obj\Debug\netcoreapp2.1\Chat.Models.csproj.CoreCompileInputs.cache
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Models\obj\Debug\netcoreapp2.1\Chat.Models.AssemblyInfoInputs.cache
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Models\obj\Debug\netcoreapp2.1\Chat.Models.AssemblyInfo.cs
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Models\obj\Debug\netcoreapp2.1\Chat.Models.dll
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Models\obj\Debug\netcoreapp2.1\Chat.Models.pdb
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Models\bin\Debug\netcoreapp2.1\Chat.Models.deps.json
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Models\bin\Debug\netcoreapp2.1\Chat.Models.dll
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Models\bin\Debug\netcoreapp2.1\Chat.Models.pdb
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Models\obj\Debug\netcoreapp2.1\Chat.Models.csprojAssemblyReference.cache
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Models\obj\Debug\netcoreapp2.1\Chat.Models.csproj.CoreCompileInputs.cache
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Models\obj\Debug\netcoreapp2.1\Chat.Models.AssemblyInfoInputs.cache
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Models\obj\Debug\netcoreapp2.1\Chat.Models.AssemblyInfo.cs
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Models\obj\Debug\netcoreapp2.1\Chat.Models.dll
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Models\obj\Debug\netcoreapp2.1\Chat.Models.pdb

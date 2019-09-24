@@ -1,0 +1,56 @@
+C:\Users\User\source\repos\Chat\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.BLL.deps.json
+C:\Users\User\source\repos\Chat\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.BLL.dll
+C:\Users\User\source\repos\Chat\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.BLL.pdb
+C:\Users\User\source\repos\Chat\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Chat\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Chat\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Chat\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.AssemblyInfo.cs
+C:\Users\User\source\repos\Chat\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.dll
+C:\Users\User\source\repos\Chat\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.pdb
+C:\Users\User\source\repos\Chat\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.DAL.dll
+C:\Users\User\source\repos\Chat\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.Models.dll
+C:\Users\User\source\repos\Chat\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.DAL.pdb
+C:\Users\User\source\repos\Chat\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.Models.pdb
+C:\Users\User\source\repos\Chat\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.csproj.CopyComplete
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.BLL.deps.json
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.BLL.dll
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.BLL.pdb
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.DAL.dll
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.Models.dll
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.DAL.pdb
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.Models.pdb
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.csprojAssemblyReference.cache
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.csproj.CoreCompileInputs.cache
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.AssemblyInfoInputs.cache
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.AssemblyInfo.cs
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.csproj.CopyComplete
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.dll
+D:\ЧатДиплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.pdb
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.BLL.deps.json
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.BLL.dll
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.BLL.pdb
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.DAL.dll
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.Models.dll
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.DAL.pdb
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.Models.pdb
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.csprojAssemblyReference.cache
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.csproj.CoreCompileInputs.cache
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.AssemblyInfoInputs.cache
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.AssemblyInfo.cs
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.csproj.CopyComplete
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.dll
+D:\Копия диплом\SwetlanaZhukian-chat-978fc235f809\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.pdb
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.BLL.deps.json
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.BLL.dll
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.BLL.pdb
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.DAL.dll
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.Models.dll
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.DAL.pdb
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Chat.BLL\bin\Debug\netcoreapp2.1\Chat.Models.pdb
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.csprojAssemblyReference.cache
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.csproj.CoreCompileInputs.cache
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.AssemblyInfoInputs.cache
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.AssemblyInfo.cs
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.csproj.CopyComplete
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.dll
+D:\Диплом\Chat\SwetlanaZhukian-copychat-2e00cc7e7f91\SwetlanaZhukian-copychat-2e00cc7e7f91\Chat.BLL\obj\Debug\netcoreapp2.1\Chat.BLL.pdb

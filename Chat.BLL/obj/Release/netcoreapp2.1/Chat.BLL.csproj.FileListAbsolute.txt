@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\Chat\Chat.BLL\bin\Release\netcoreapp2.1\Chat.BLL.deps.json
+C:\Users\User\source\repos\Chat\Chat.BLL\bin\Release\netcoreapp2.1\Chat.BLL.dll
+C:\Users\User\source\repos\Chat\Chat.BLL\bin\Release\netcoreapp2.1\Chat.BLL.pdb
+C:\Users\User\source\repos\Chat\Chat.BLL\bin\Release\netcoreapp2.1\Chat.DAL.dll
+C:\Users\User\source\repos\Chat\Chat.BLL\bin\Release\netcoreapp2.1\Chat.Models.dll
+C:\Users\User\source\repos\Chat\Chat.BLL\bin\Release\netcoreapp2.1\Chat.DAL.pdb
+C:\Users\User\source\repos\Chat\Chat.BLL\bin\Release\netcoreapp2.1\Chat.Models.pdb
+C:\Users\User\source\repos\Chat\Chat.BLL\obj\Release\netcoreapp2.1\Chat.BLL.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Chat\Chat.BLL\obj\Release\netcoreapp2.1\Chat.BLL.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Chat\Chat.BLL\obj\Release\netcoreapp2.1\Chat.BLL.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Chat\Chat.BLL\obj\Release\netcoreapp2.1\Chat.BLL.AssemblyInfo.cs
+C:\Users\User\source\repos\Chat\Chat.BLL\obj\Release\netcoreapp2.1\Chat.BLL.csproj.CopyComplete
+C:\Users\User\source\repos\Chat\Chat.BLL\obj\Release\netcoreapp2.1\Chat.BLL.dll
+C:\Users\User\source\repos\Chat\Chat.BLL\obj\Release\netcoreapp2.1\Chat.BLL.pdb

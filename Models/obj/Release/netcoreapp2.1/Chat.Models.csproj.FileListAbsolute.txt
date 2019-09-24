@@ -1,0 +1,9 @@
+C:\Users\User\source\repos\Chat\Models\bin\Release\netcoreapp2.1\Chat.Models.deps.json
+C:\Users\User\source\repos\Chat\Models\bin\Release\netcoreapp2.1\Chat.Models.dll
+C:\Users\User\source\repos\Chat\Models\bin\Release\netcoreapp2.1\Chat.Models.pdb
+C:\Users\User\source\repos\Chat\Models\obj\Release\netcoreapp2.1\Chat.Models.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Chat\Models\obj\Release\netcoreapp2.1\Chat.Models.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Chat\Models\obj\Release\netcoreapp2.1\Chat.Models.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Chat\Models\obj\Release\netcoreapp2.1\Chat.Models.AssemblyInfo.cs
+C:\Users\User\source\repos\Chat\Models\obj\Release\netcoreapp2.1\Chat.Models.dll
+C:\Users\User\source\repos\Chat\Models\obj\Release\netcoreapp2.1\Chat.Models.pdb
