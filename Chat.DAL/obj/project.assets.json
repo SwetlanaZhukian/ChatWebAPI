@@ -5962,11 +5962,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Диплом\\Chat\\SwetlanaZhukian-copychat-2e00cc7e7f91\\SwetlanaZhukian-copychat-2e00cc7e7f91\\Chat.DAL\\Chat.DAL.csproj",
+      "projectUniqueName": "D:\\Диплом\\Копия\\SwetlanaZhukian-copychat-2e00cc7e7f91\\SwetlanaZhukian-copychat-2e00cc7e7f91\\Chat.DAL\\Chat.DAL.csproj",
       "projectName": "Chat.DAL",
-      "projectPath": "D:\\Диплом\\Chat\\SwetlanaZhukian-copychat-2e00cc7e7f91\\SwetlanaZhukian-copychat-2e00cc7e7f91\\Chat.DAL\\Chat.DAL.csproj",
+      "projectPath": "D:\\Диплом\\Копия\\SwetlanaZhukian-copychat-2e00cc7e7f91\\SwetlanaZhukian-copychat-2e00cc7e7f91\\Chat.DAL\\Chat.DAL.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "D:\\Диплом\\Chat\\SwetlanaZhukian-copychat-2e00cc7e7f91\\SwetlanaZhukian-copychat-2e00cc7e7f91\\Chat.DAL\\obj\\",
+      "outputPath": "D:\\Диплом\\Копия\\SwetlanaZhukian-copychat-2e00cc7e7f91\\SwetlanaZhukian-copychat-2e00cc7e7f91\\Chat.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5985,8 +5985,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\Диплом\\Chat\\SwetlanaZhukian-copychat-2e00cc7e7f91\\SwetlanaZhukian-copychat-2e00cc7e7f91\\Models\\Chat.Models.csproj": {
-              "projectPath": "D:\\Диплом\\Chat\\SwetlanaZhukian-copychat-2e00cc7e7f91\\SwetlanaZhukian-copychat-2e00cc7e7f91\\Models\\Chat.Models.csproj"
+            "D:\\Диплом\\Копия\\SwetlanaZhukian-copychat-2e00cc7e7f91\\SwetlanaZhukian-copychat-2e00cc7e7f91\\Models\\Chat.Models.csproj": {
+              "projectPath": "D:\\Диплом\\Копия\\SwetlanaZhukian-copychat-2e00cc7e7f91\\SwetlanaZhukian-copychat-2e00cc7e7f91\\Models\\Chat.Models.csproj"
             }
           }
         }

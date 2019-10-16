@@ -16,6 +16,8 @@ namespace Chat.BLL.DTO
         public string ContactName { get; set; }
         public string Date { get; set; }
         public bool InBlock { get; set; }
+        public string LastTimeOnline { get; set; }
+        public bool IsOnline { get; set; }
         public List<MessageViewModel> Messages{get;set;}
       
 
@@ -28,15 +30,25 @@ namespace Chat.BLL.DTO
                 ContactId = dialog.ContactId;
                 Avatar = dialog.Contact.Avatar;
                 InBlock = false;
+                LastTimeOnline = dialog.Contact.LastTimeOnline.ToString("dd-MM-yyyy HH:mm"); 
                 if (Avatar==null)
                 {
                     Avatar= "\\Resources\\Images\\default.jpg";
                 }
                 ContactName = dialog.Contact.Name;
-                var lastMessage = dialog.Messages.LastOrDefault();
+                
                 if (dialog.Messages.Count != 0)
                 {
-                    LastMessage = lastMessage.Content;
+                    var lastMessage = dialog.Messages.LastOrDefault();
+                    if (lastMessage.Content.Length < 40)
+                    {
+                        LastMessage = lastMessage.Content;
+                    }
+                    else
+                    {
+                        LastMessage = lastMessage.Content.Substring(0, 40) + "...";
+                    }
+                   // LastMessage = lastMessage.Content;
                     Date = lastMessage.Date.ToString("dd-MM-yyyy HH:mm");
                    
                 }
@@ -47,15 +59,25 @@ namespace Chat.BLL.DTO
                 ContactId = dialog.UserId;
                 Avatar = dialog.User.Avatar;
                 InBlock = false;
+                LastTimeOnline = dialog.User.LastTimeOnline.ToString("dd-MM-yyyy HH:mm");
                 if (Avatar == null)
                 {
                     Avatar = "\\Resources\\Images\\default.jpg";
                 }
                 ContactName = dialog.User.Name;
-                var lastMessage = dialog.Messages.LastOrDefault();
+               
                 if (dialog.Messages.Count != 0)
                 {
-                    LastMessage = lastMessage.Content;
+                    var lastMessage = dialog.Messages.LastOrDefault();
+                    if (lastMessage.Content.Length <40)
+                    {
+                        LastMessage = lastMessage.Content;
+                    }
+                    else
+                    {
+                        LastMessage = lastMessage.Content.Substring(0, 40) + "...";
+                    }
+                  //  LastMessage = lastMessage.Content;
                     Date = lastMessage.Date.ToString("dd-MM-yyyy HH:mm");
                    
                 }

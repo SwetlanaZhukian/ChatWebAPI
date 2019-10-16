@@ -18,14 +18,16 @@ namespace Chat.Controllers
     {
         private UserManager<User> userManager;
         private readonly IContactService contactService;
+        private readonly IChatService chatService;
         private readonly IMapper mapper;
         private readonly IBlackListService blackListService;
-        public ContactController(UserManager<User> _userManager,  IMapper _mapper, IContactService _contactService,IBlackListService _blackListService)
+        public ContactController(UserManager<User> _userManager, IChatService _chatService, IMapper _mapper, IContactService _contactService,IBlackListService _blackListService)
         {
             userManager = _userManager;
             mapper = _mapper;
             contactService = _contactService;
             blackListService = _blackListService;
+            chatService = _chatService;
 
 
         }
@@ -110,7 +112,16 @@ namespace Chat.Controllers
 
                 bool hasContact = contactService.HasContact(Id, user.Id);
                 bool hasInBlock = blackListService.HasUserInBlock(Id, user.UserId);
-               // bool hasInBlockContact = blackListService.HasUserInBlock(user.UserId, Id);
+                // bool hasInBlockContact = blackListService.HasUserInBlock(user.UserId, Id);
+                bool online = chatService.IsOnline(user.UserId);
+                if (online)
+                {
+                    user.IsOnline = true;
+                }
+                else
+                {
+                    user.IsOnline = false;
+                }
                 if (hasContact)
                 {
                     user.UserInContact = true;

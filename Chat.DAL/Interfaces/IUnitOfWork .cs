@@ -9,7 +9,9 @@ namespace Chat.DAL.Interfaces
     {
         IRepository<Contact> Contacts { get; }
         IRepository<BlackList> BlackLists { get; }
+        
         IRepositoryBase<Message> Messages { get; }
+        IRepositoryBase<User> Users { get; }
         IRepositoryBase<Dialog> Dialogs { get; }
         IRepositoryBase<File> Files { get; }
         void Save();

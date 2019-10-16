@@ -130,7 +130,7 @@ namespace Chat.DAL.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
-                    b.Property<bool>("IsOnline");
+                    b.Property<DateTime>("LastTimeOnline");
 
                     b.Property<bool>("LockoutEnabled");
 

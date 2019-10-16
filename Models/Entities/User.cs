@@ -17,8 +17,7 @@ namespace Chat.Models.Entities
         public virtual ICollection <Dialog> UserDialogs { get; set; }
         public virtual  ICollection <Dialog> ContactDialogs { get; set; }
         public string Avatar { get; set; }
-        public bool IsOnline { get; set; }
-
+        public DateTime LastTimeOnline { get; set; }
         public User()
         {
             UserDialogs = new List<Dialog>();

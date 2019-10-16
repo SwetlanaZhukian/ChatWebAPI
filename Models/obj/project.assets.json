@@ -1164,11 +1164,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Диплом\\Chat\\SwetlanaZhukian-copychat-2e00cc7e7f91\\SwetlanaZhukian-copychat-2e00cc7e7f91\\Models\\Chat.Models.csproj",
+      "projectUniqueName": "D:\\Диплом\\Копия\\SwetlanaZhukian-copychat-2e00cc7e7f91\\SwetlanaZhukian-copychat-2e00cc7e7f91\\Models\\Chat.Models.csproj",
       "projectName": "Chat.Models",
-      "projectPath": "D:\\Диплом\\Chat\\SwetlanaZhukian-copychat-2e00cc7e7f91\\SwetlanaZhukian-copychat-2e00cc7e7f91\\Models\\Chat.Models.csproj",
+      "projectPath": "D:\\Диплом\\Копия\\SwetlanaZhukian-copychat-2e00cc7e7f91\\SwetlanaZhukian-copychat-2e00cc7e7f91\\Models\\Chat.Models.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "D:\\Диплом\\Chat\\SwetlanaZhukian-copychat-2e00cc7e7f91\\SwetlanaZhukian-copychat-2e00cc7e7f91\\Models\\obj\\",
+      "outputPath": "D:\\Диплом\\Копия\\SwetlanaZhukian-copychat-2e00cc7e7f91\\SwetlanaZhukian-copychat-2e00cc7e7f91\\Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

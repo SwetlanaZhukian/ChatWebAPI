@@ -60,13 +60,18 @@ namespace Chat.DAL.Repositories
             return exist;
           
         }
+        public async Task Edit(T item)
+        {
+            db.Entry(item).State = EntityState.Modified;
+            await SaveAsync();
+        }
         public async Task<int> Delete(T item)
         {
             db.Set<T>().Remove(item);
             return await db.SaveChangesAsync();
         }
+        
 
-      
         public async Task SaveAsync()
         {
             await db.SaveChangesAsync();

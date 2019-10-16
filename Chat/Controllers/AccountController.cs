@@ -32,7 +32,9 @@ namespace Chat.Controllers
         private readonly IEmailSender _emailSender;
         private readonly IMapper _mapper;
         private readonly ApplicationSettings _appsettings;
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IOptions<EmailConfig> options, IEmailSender emailSender, IMapper mapper, IOptions<ApplicationSettings> appsettings)
+        private IChatHub chatHub;
+        private readonly IUserService userService;
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IOptions<EmailConfig> options, IEmailSender emailSender, IMapper mapper, IOptions<ApplicationSettings> appsettings, IChatHub _chatHub, IUserService _userService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -40,6 +42,8 @@ namespace Chat.Controllers
             _emailSender = emailSender;
             _mapper = mapper;
             _appsettings = appsettings.Value;
+            chatHub = _chatHub;
+            userService = _userService;
          
         }
 
@@ -140,47 +144,23 @@ namespace Chat.Controllers
             else
                 return BadRequest(new { message = "Логин или пароль не верны." });
         }
+ 
 
-        //    [Route("signInWithGoogle")]
-        //    public IActionResult SignInWithGoogle()
-        //    {
-        //        var authenticationProperties = _signInManager.ConfigureExternalAuthenticationProperties("Google", Url.Action(nameof(HandleExternalLogin)));
-        //        return Challenge(authenticationProperties, "Google");
-        //    }
-        //    public async Task<IActionResult> HandleExternalLogin()
-        //    {
-        //        var info = await _signInManager.GetExternalLoginInfoAsync();
-
-        //        var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false);
-
-        //        if (!result.Succeeded) //user does not exist yet
-        //        {
-        //            var email = info.Principal.FindFirstValue(ClaimTypes.Email);
-        //           // var phone = info.Principal.FindFirstValue(ClaimTypes.MobilePhone);
-        //            var newUser = new User
-        //            {
-        //                UserName = email,
-        //                Email = email,
-        //                EmailConfirmed = true
-        //            };
-        //            var createResult = await _userManager.CreateAsync(newUser);
-        //            if (!createResult.Succeeded)
-        //                throw new Exception(createResult.Errors.Select(e => e.Description).Aggregate((errors, error) => $"{errors}, {error}"));
-
-        //            await _userManager.AddLoginAsync(newUser, info);
-        //            var newUserClaims = info.Principal.Claims.Append(new Claim("userId", newUser.Id));
-        //            await _userManager.AddClaimsAsync(newUser, newUserClaims);
-        //            await _signInManager.SignInAsync(newUser, isPersistent: false);
-        //            await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
-        //        }
-
-        //        return Redirect("_appsettings.Client_URL+"/home");
-        //    }
-        //public async Task<IActionResult> LogOff()
-        //{
-        //    string Id = User.Claims.First(c => c.Type == "Id").Value;
-
-        //    await chat.OnDisconnected(Id);
-        //}
+        [HttpGet]
+        [Authorize]
+        [Route("disconnect")]
+        public async Task Logout()
+        {
+            try
+            {
+                var id = User.Claims.First(c => c.Type == "Id").Value;
+                chatHub.Disconnect(id);
+                await userService.SetLastTimeOnline(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -10,5 +10,6 @@ namespace Chat.BLL.Interfaces
 {public interface IUserService
     {
         Task<IEnumerable<User>> Search(string id, string str);
+        Task SetLastTimeOnline(string id);
     }
 }

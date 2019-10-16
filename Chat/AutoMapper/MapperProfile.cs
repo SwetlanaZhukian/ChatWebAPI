@@ -24,7 +24,8 @@ namespace Chat.AutoMapper
            .ForMember(c =>c.Name, s => s.MapFrom(x => x.Friend.Name))     
            .ForMember(c => c.Email, s => s.MapFrom(x => x.Friend.Email))
            .ForMember(c => c.PhoneNumber, s => s.MapFrom(x => x.Friend.PhoneNumber))
-           .ForMember(c => c.Avatar, s => s.MapFrom(x => x.Friend.Avatar))  
+           .ForMember(c => c.Avatar, s => s.MapFrom(x => x.Friend.Avatar))
+           .ForMember(c => c.LastTimeOnline, s => s.MapFrom(x => x.Friend.LastTimeOnline))
            .ReverseMap();
 
             CreateMap<BlackList, ContactViewModel>()
@@ -33,6 +34,7 @@ namespace Chat.AutoMapper
            .ForMember(c => c.Email, s => s.MapFrom(x => x.ContactBlock.Email))
            .ForMember(c => c.PhoneNumber, s => s.MapFrom(x => x.ContactBlock.PhoneNumber))
            .ForMember(c => c.Avatar, s => s.MapFrom(x => x.ContactBlock.Avatar))
+           .ForMember(c => c.LastTimeOnline, s => s.MapFrom(x => x.ContactBlock.LastTimeOnline))
            .ReverseMap();
 
            

@@ -64,35 +64,6 @@ namespace Chat.BLL.Services
             }
         }
 
-        //  public async Task AddMessageAsync(string user1Id, string user2Id, string message, DateTime date)
-        //  {
-        //      var user = await userManager.FindByIdAsync(user1Id);
-        //      var dialog = new Dialog();
-        //      if (user.UserDialogs.Any(p => p.UserId == user1Id && p.ContactId == user2Id))
-        //      {
-        //          var userdialog = user.UserDialogs.SingleOrDefault(p => p.UserId == user1Id && p.ContactId == user2Id);
-        //          dialog = userdialog;
-        //      }
-        //      if (user.ContactDialogs.Any(p => p.UserId == user2Id && p.ContactId == user1Id))
-        //      {
-        //          var userdialog = user.ContactDialogs.SingleOrDefault(p => p.UserId == user2Id && p.ContactId == user1Id);
-        //          dialog = userdialog;
-        //      }
-        //      if (!String.IsNullOrEmpty(message))
-        //      {
-        //          var newmessage = new Message
-        //          {
-        //              DialogId = dialog.DialogId,
-        //              Content = message,
-        //              UserId = user1Id,
-        //              Date = date,
-        //          };
-        //          await db.Messages.Create(newmessage);
-        //          await db.Messages.SaveAsync();
-        //      }
-
-        //  }
-
 
         public async Task<bool> IsExistDialog(string user1Id, string user2Id)
         {
@@ -109,7 +80,8 @@ namespace Chat.BLL.Services
                 var user = await userManager.FindByIdAsync(user1Id);
                 var dialoglist = user.UserDialogs.Union(user.ContactDialogs);
                 var dialog = dialoglist.SingleOrDefault(p => (p.UserId == user1Id && p.ContactId == user2Id) || (p.UserId == user2Id && p.ContactId == user1Id));
-                if (dialog != null)
+               
+                    if (dialog != null)
                 {
                     var dialogs = new DialogViewModel(dialog, user);
                     dialogs.Messages = await GetAllMessagesForDialogAsync(user1Id, user2Id);
@@ -122,8 +94,24 @@ namespace Chat.BLL.Services
                     return dialogs;
                 }
                 else
-                    return null;
-
+                { 
+                var user1 = await userManager.FindByIdAsync(user1Id);
+                var user2 = await userManager.FindByIdAsync(user2Id);
+                var dialog1 = new Dialog
+                {
+                    UserId = user1Id,
+                    ContactId = user2Id
+                };
+                await db.Dialogs.Create(dialog);
+                    var dialogs = new DialogViewModel(dialog, user);
+                    bool hasInBlock = blackListService.HasUserInBlock(user1Id, user2Id);
+                    bool hasInBlockContact = blackListService.HasUserInBlock(user2Id, user1Id);
+                    if (hasInBlock || hasInBlockContact)
+                    {
+                        dialogs.InBlock = true;
+                    }
+                    return dialogs;
+                    }
             }
             catch (Exception ex)
             {
@@ -143,7 +131,9 @@ namespace Chat.BLL.Services
                 ContactId = user2Id
             };
             await db.Dialogs.Create(dialog);
-            await db.Dialogs.SaveAsync();
+            
+                await db.Dialogs.SaveAsync();
+           
         }
 
         public async Task<IEnumerable<Dialog>> GetAllDialogList(string userId)
@@ -163,6 +153,15 @@ namespace Chat.BLL.Services
                 if (dialog.Messages.Count != 0)
                 {
                     var model = new DialogViewModel(dialog, user);
+                    bool online =IsOnline(model.ContactId);
+                    if (online)
+                    {
+                        model.IsOnline = true;
+                    }
+                    else
+                    {
+                        model.IsOnline = false;
+                    }
                     allDialogs.Add(model);
                 }
             }
@@ -211,106 +210,7 @@ namespace Chat.BLL.Services
         }
         
 
-        //public async Task CreateDialog(string userId, string friendId)
-        //{
-        //    try
-        //    {
-        //        User user = await userManager.FindByIdAsync(userId);
-        //        User friend = await userManager.FindByIdAsync(friendId);
-        //        var usersDialog = new Dialog
-        //        {
-        //            UserId = userId,
-        //            ContactId= friendId
-        //        };
-        //        await db.Dialogs.Create(usersDialog);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-
-        //public async Task<List<MessageViewModel>> GetAllDialogMessages(string userId, string friendId)
-        //{
-        //    try
-        //    {
-        //        User user = await userManager.FindByIdAsync(userId);
-        //        var dialogList = user.UserDialogs.Union(user.ContactDialogs);
-        //        var dialog = dialogList.Single(c => (c.ContactId == friendId && c.UserId == userId) || (c.UserId == friendId && c.ContactId == userId));
-        //        var result = new List<MessageViewModel>();
-        //        var messagesList = dialog.Messages;
-        //        foreach (var item in messagesList)
-        //        {
-        //            result.Add(new MessageViewModel(item));
-        //        }
-        //        return result;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-
-        //}
-        //public async Task<List<DialogViewModel>> GetAllDialogs(string userId)
-        //{
-        //    try
-        //    {
-        //        User user = await userManager.FindByIdAsync(userId);
-        //        var dialogList = user.UserDialogs.Union(user.ContactDialogs);
-        //        var result = new List<DialogViewModel>();
-        //        foreach (var item in dialogList)
-        //        {
-                  
-        //                var dialogVM = new DialogViewModel(item, user);
-        //                result.Add(dialogVM);
-        //                var messagesList = item.Messages;
-        //                var messagesListVM = new List<MessageViewModel>();
-        //                foreach (var message in messagesList)
-        //                {
-        //                    var messageVM = new MessageViewModel(message);
-        //                    messagesListVM.Add(messageVM);
-        //                }
-        //                dialogVM.Messages = messagesListVM;
-                    
-        //        }
-        //        return result;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-
-        //public async Task<DialogViewModel> GetDialog(string userId, string friendId)
-        //{
-        //    try
-        //    {
-        //        User user = await userManager.FindByIdAsync(userId);
-        //        var dialogList = user.UserDialogs.Union(user.ContactDialogs);
-        //        var dialog = dialogList.Single(c => (c.ContactId == friendId && c.UserId == userId) || (c.UserId == friendId && c.ContactId== userId));
-        //        var dialogVM = new DialogViewModel(dialog, user);
-        //        dialogVM.Messages = await GetAllDialogMessages(userId, friendId);
-        //        if ( blackListService.HasUserInBlock(friendId, userId))
-        //        {
-
-        //            dialogVM.InBlock= true;
-        //        }
-        //        else dialogVM.InBlock = false;
-        //        return dialogVM;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-
-        //}
-
-        //public async Task<bool> IsDialogExists(string senderId, string recevierId)
-        //{
-        //    var dialogs = await GetAllDialogList(senderId);
-        //       bool result = dialogs.Any(p =>( p.UserId == senderId && p.ContactId == recevierId) || (p.UserId == recevierId && p.ContactId == senderId));
-        //       return result;
-        //}
+       
         public bool IsOnline(string id)
         {
             if (UserIds.usersList.Any(c => c.userId == id))
@@ -318,6 +218,17 @@ namespace Chat.BLL.Services
                 return true;
             }
             else return false;
+        }
+        public async Task<Dialog> FindDialog(string user1Id, string user2Id)
+        {
+            var user = await userManager.FindByIdAsync(user1Id);
+            var dialoglist = user.UserDialogs.Union(user.ContactDialogs);
+            var dialog = dialoglist.SingleOrDefault(p => (p.UserId == user1Id && p.ContactId == user2Id) || (p.UserId == user2Id && p.ContactId == user1Id));
+            return dialog;
+        }
+        public async Task DeleteDialog(Dialog dialog)
+        {
+            await db.Dialogs.Delete(dialog);
         }
     }
 }

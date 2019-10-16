@@ -17,13 +17,12 @@ namespace Chat.BLL.Interfaces
         Task CreateNewDialogAsync(string user1Id, string user2Id);
         Task<IEnumerable<Dialog>> GetAllDialogList(string userId);
         Task<IEnumerable<DialogViewModel>> GetAllUserDialogs(string userId);
-        //Task<List<DialogViewModel>> GetAllDialogs(string userId);
-        //Task<List<MessageViewModel>> GetAllDialogMessages(string userId, string friendId);
         Task<MessageViewModel> AddNewMessage(string senderId, PostMessageViewModel postMessage, DateTime time);
-        //Task<bool> IsDialogExists(string senderId, string recevierId);
-        //Task<DialogViewModel> GetDialog(string userId, string friendId);
-        //Task CreateDialog(string userId, string friendId);
         bool IsOnline(string id);
+        Task<Dialog> FindDialog(string user1Id, string user2Id);
+        Task DeleteDialog(Dialog dialog);
+
+
 
     }
 }

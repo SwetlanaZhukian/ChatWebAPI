@@ -13,7 +13,8 @@ namespace Chat.BLL.DTO
         public string UserId { get; set; }
         public string Date { get; set; }
         public string Name { get; set; }
-       
+        public string UserImage { get; set; }
+
         public ICollection<FileViewModel> FilePaths { get; set; }
 
         public MessageViewModel(Message message)
@@ -24,7 +25,17 @@ namespace Chat.BLL.DTO
                 if (!String.IsNullOrEmpty(message.Content))
                 {
                     Content = message.Content;
-                } 
+                }
+                if (message.User != null)
+                {
+                    Name = message.User.Name;
+                   
+                    if (message.User.Avatar != null)
+                    {
+                        UserImage = message.User.Avatar;
+                    }
+                    else UserImage = "\\Resources\\Images\\default.jpg";
+                }
                 UserId = message.UserId;
                 Date=message.Date.ToString("dd-MM-yyyy HH:mm");
                 Name = message.User.Name;

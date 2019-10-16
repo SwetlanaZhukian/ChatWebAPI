@@ -112,7 +112,9 @@ namespace Chat
             services.AddTransient<IRepositoryBase<Dialog>, RepositoryBase<Dialog>>();
             services.AddTransient<IRepositoryBase<Message>, RepositoryBase<Message>>();
             services.AddTransient<IRepositoryBase<File>, RepositoryBase<File>>();
+            services.AddTransient<IRepositoryBase<User>, RepositoryBase<User>>();
             services.AddTransient<IRepository<Contact>, ContactRepository>();
+            
             services.AddTransient<IRepository<BlackList>, BlackListRepository>();
             services.AddTransient<IEmailSender,EmailSender>();
             services.AddTransient<IChatService, ChatService>();

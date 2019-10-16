@@ -17,7 +17,9 @@ namespace Chat.DAL.Interfaces
       Task Create(T item);
       Task<T> Update(T item, object key);
       Task<int> Delete(T item);
-      Task SaveAsync();
+        Task Edit(T item);
+     
+        Task SaveAsync();
 
     }
 }

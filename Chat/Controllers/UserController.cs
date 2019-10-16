@@ -22,14 +22,16 @@ namespace Chat.Controllers
     {
         private UserManager<User> userManager;
         private readonly IUserService userService;
+        private readonly IChatService chatService;
         private readonly IContactService contactService;
         private readonly IMapper mapper;
         private readonly IFileManager fileManager;
         private readonly IBlackListService blackListService;
-        public UserController(UserManager<User> _userManager,IUserService _userService,IMapper _mapper,IFileManager _fileManager,IContactService _contactService, IBlackListService _blackListService)
+        public UserController(UserManager<User> _userManager,IUserService _userService,IChatService _chatService ,IMapper _mapper,IFileManager _fileManager,IContactService _contactService, IBlackListService _blackListService)
         {
             userManager = _userManager;
             userService = _userService;
+            chatService = _chatService;
             mapper = _mapper;
             fileManager = _fileManager;
             contactService = _contactService;
@@ -97,7 +99,7 @@ namespace Chat.Controllers
         }
         [HttpGet]
         [Route("search")]
-        public async Task<IActionResult> Search( string str)
+        public async Task<IActionResult> Search(string str)
         {
             string Id = User.Claims.First(c => c.Type == "Id").Value;
             if (String.IsNullOrEmpty(str))
@@ -105,25 +107,59 @@ namespace Chat.Controllers
                 return NotFound();
             }
             var search = await userService.Search(Id, str);
-            var users = mapper.Map<IEnumerable<User>, List<ContactViewModel>>(search); 
-            foreach(var user in users)
+            var users = mapper.Map<IEnumerable<User>, List<ContactViewModel>>(search);
+            foreach (var user in users)
             {
                 if (String.IsNullOrEmpty(user.Avatar))
-                    user.Avatar = "\\Resources\\Images\\default.jpg";
+                user.Avatar = "\\Resources\\Images\\default.jpg";
                 bool hasContact = contactService.HasContact(Id, user.Id);
-                bool hasInBlock = blackListService.HasUserInBlock(Id, user.Id); 
+                bool hasInBlock = blackListService.HasUserInBlock(Id, user.Id);
+                bool online = chatService.IsOnline(user.Id);
+                if (online)
+                {
+                    user.IsOnline = true;
+                }
+                else
+                {
+                    user.IsOnline = false;
+                }
                 if (hasContact)
                 {
                     user.UserInContact = true;
                 }
-                if(hasInBlock)
+                if (hasInBlock)
                 {
                     user.Status = true;
                 }
             }
-           
+
             return Ok(users);
 
         }
+        //[HttpGet("{pageIndex:int}/{pageSize:int}")]
+        //[Route("search")]
+        //public async Task<IActionResult> Search( string str, int pageIndex, int pageSize)
+        //{
+        //    string Id = User.Claims.First(c => c.Type == "Id").Value;
+        //    if (String.IsNullOrEmpty(str))
+        //    {
+        //        return NotFound();
+        //    }
+        //    var search = await userService.Search(Id, str);
+        //    //var data = _ctx.Customers.OrderBy(c => c.Id);
+        //    var users = mapper.Map<IEnumerable<User>, List<ContactViewModel>>(search);
+        //    var page = new PaginatedResponse<ContactViewModel>(users, pageIndex, pageSize);
+
+        //    var totalCount = users.Count();
+        //    var totalPages = Math.Ceiling((double)totalCount / pageSize);
+
+        //    var response = new
+        //    {
+        //        Page = page,
+        //        TotalPages = totalPages
+        //    };
+
+        //    return Ok(response);
+        //}
     }
 }

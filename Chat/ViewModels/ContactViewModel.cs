@@ -15,7 +15,8 @@ namespace Chat.ViewModels
         public string Avatar { get; set; }
         public bool UserInContact { get; set; }
         public bool Status { get; set; }
-        public string NickName { get; set; }
+        public bool IsOnline { get; set; }
+        public string LastTimeOnline { get; set; }
 
     }
 }

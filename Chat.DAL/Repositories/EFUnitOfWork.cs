@@ -13,8 +13,10 @@ namespace Chat.DAL.Repositories
         private RepositoryBase<Message> messageRepository;
         private RepositoryBase<Dialog> dialogRepository;
         private RepositoryBase<File> fileRepository;
+        private RepositoryBase<User> userRepository;
         private ContactRepository contactRepository;
         private BlackListRepository blackListRepository;
+       
 
 
         public EFUnitOfWork(ChatContext _db)
@@ -30,6 +32,15 @@ namespace Chat.DAL.Repositories
                 return contactRepository;
             }
         }
+
+        //IDialogRepository<Dialog> Dialogs1 {
+        //    get
+        //    {
+        //        if (dRepository == null)
+        //            dRepository = new DialogRepository(db);
+        //        return dRepository;
+        //    }
+        //}
         public IRepositoryBase<File> Files
         {
             get
@@ -58,6 +69,15 @@ namespace Chat.DAL.Repositories
                 return messageRepository;
             }
         }
+        public IRepositoryBase<User> Users
+        {
+            get
+            {
+                if (userRepository == null)
+                    userRepository = new RepositoryBase<User>(db);
+                return userRepository;
+            }
+        }
         public IRepositoryBase<Dialog> Dialogs
         {
             get
@@ -67,6 +87,8 @@ namespace Chat.DAL.Repositories
                 return dialogRepository;
             }
         }
+
+        
 
         public void Save()
         {

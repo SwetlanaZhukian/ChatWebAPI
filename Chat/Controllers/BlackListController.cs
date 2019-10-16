@@ -18,14 +18,16 @@ namespace Chat.Controllers
     {
         private UserManager<User> userManager;
         private readonly IContactService contactService;
+        private readonly IChatService chatService;
         private readonly IMapper mapper;
         private readonly IBlackListService blackListService;
-        public BlackListController(UserManager<User> _userManager, IMapper _mapper, IContactService _contactService, IBlackListService _blackListService)
+        public BlackListController(UserManager<User> _userManager, IChatService _chatService, IMapper _mapper, IContactService _contactService, IBlackListService _blackListService)
         {
             userManager = _userManager;
             mapper = _mapper;
             contactService = _contactService;
             blackListService = _blackListService;
+            chatService = _chatService;
         }
         [HttpGet]
         [Route("add/{id}")]
@@ -83,6 +85,15 @@ namespace Chat.Controllers
                 if (String.IsNullOrEmpty(user.Avatar))
                     user.Avatar = "\\Resources\\Images\\default.jpg";
                 bool hasUserInBlock = blackListService.HasUserInBlock(Id, user.UserId);
+                bool online = chatService.IsOnline(user.UserId);
+                if (online)
+                {
+                    user.IsOnline = true;
+                }
+                else
+                {
+                    user.IsOnline = false;
+                }
                 if (hasUserInBlock)
                 {
                     user.Status = true;

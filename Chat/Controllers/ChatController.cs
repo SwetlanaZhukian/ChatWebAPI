@@ -52,7 +52,7 @@ namespace Chat.Controllers
         //    try
         //    {
         //        var id = User.Claims.First(c => c.Type == "Id").Value;
-        //        return await chatService.GetAllDialogs(id);
+        //        return await chatService.GetAllUserDialogs(id);
         //    }
         //    catch (Exception ex)
         //    {
@@ -67,10 +67,16 @@ namespace Chat.Controllers
             try
             {
                 var id = User.Claims.First(c => c.Type == "Id").Value;
+                if (!(await chatService.IsExistDialog(id, friendId)))
+                {
+                    await chatService.CreateNewDialogAsync(id, friendId);
+                }
                 if (await chatService.IsExistDialog(id, friendId))
                 {
                     return await chatService.GetDialogAsync(id, friendId);
                 }
+
+
                 else return BadRequest("Add new message to start dialog");
 
             }
@@ -86,18 +92,19 @@ namespace Chat.Controllers
         {
             string Id = User.Claims.First(c => c.Type == "Id").Value;
             var dialogs = await chatService.GetAllUserDialogs(Id);
+
             return Ok(dialogs);
 
         }
 
-        //[HttpGet("{id}")]
-        //public async Task<object> GetAllMessages(string id)
-        //{
-        //    string Id = User.Claims.First(c => c.Type == "Id").Value;
-        //    var messages = await chatService.GetDialogAsync(Id, id);
-        //    return Ok(messages);
+        [HttpGet("{id}")]
+        public async Task<object> GetAllMessages(string id)
+        {
+            string Id = User.Claims.First(c => c.Type == "Id").Value;
+            var messages = await chatService.GetDialogAsync(Id, id);
+            return Ok(messages);
 
-        //}
+        }
         [HttpPost]
         [Authorize]
         [Route("sendMessage")]
@@ -184,6 +191,26 @@ namespace Chat.Controllers
             {
                 throw ex;
             }
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(string id)
+        {
+            try
+            {
+                string Id = User.Claims.First(c => c.Type == "Id").Value;
+                var dialog = await chatService.FindDialog(Id, id);
+                if (dialog == null)
+                {
+                    return BadRequest();
+                }
+                await chatService.DeleteDialog(dialog);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
 
 
